@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Example</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230605163625">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header id="up" class="header" data-scroll="5">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">@<span>Media query</span></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Введення</a></li>
+							<li class="menu__item"><a href="expediency.html" class="menu__link">Доцільність</a></li>
+							<li class="menu__item"><a href="connection.html" class="menu__link">Підключення</a></li>
+							<li class="menu__item"><a href="syntax.html" class="menu__link">Синтаксис</a></li>
+							<li class="menu__item"><a href="example.html" class="menu__link">Приклади</a></li>
+							<li class="menu__item"><a href="adaptive.html" class="menu__link">Адаптивна сітка</a></li>
+							<li class="menu__item"><a href="mfirst.html" class="menu__link"><span lang="en">Mobile first</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__contact">
+					<a href="mailto:someMail@com" class="header__link"><img src="img/mail-black.svg" alt="mail">someMail@com</a>
+					<button type="button" class="header__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="exapmple">
+			<section class="exapmple__main-bg">
+				<h1 class="exapmple__title __container">
+					Уроки використання <span lang="en">Media Queries</span>
+				</h1>
+			</section>
+			<section class="example__main main-example">
+				<div class="main-example__little-container">
+					<h2 class="main-example__title">
+						Медіа для різних типів пристроїв
+					</h2>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Медіа-запити дозволяють</b> адаптувати
+							сторінку для різних типів пристроїв, таких як
+							принтери, голосові браузери, пристрої Брайля,
+							телевізори і т. д. Наприклад, можна встановити
+							правило стилів, яке буде застосовуватися лише
+							при друку сторінки.
+						</p>
+						<div class="main-example__exml">
+							@media print { ... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Ви також можете писати правила </b> одразу
+							для декількох пристроїв. Наприклад цей @media
+							написаний відразу для екранів та принтерів:
+						</p>
+						<div class="main-example__exml">
+							@media screen, print { ... }
+						</div>
+					</div>
+					<h2 class="main-example__title">
+						Вузконаправлені @media
+					</h2>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>У прикладі нижче</b> стилі будуть застосовані
+							тільки коли основний пристрій введення
+							користувача (наприклад, миша) буде розташований
+							над елементами:
+						</p>
+						<div class="main-example__exml">
+							@media (hover: hover) { ... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Багато медіавиразів є функцією діапазону</b>
+							і мають префікси "min-" або "max-". Мінімальне
+							значення та максимальне значення умови,
+							відповідно. Наприклад, цей CSS-код
+							застосовується тільки якщо ширина viewport менша
+							або дорівнює 1920px:
+						</p>
+						<div class="main-example__exml">
+							@media (max-width: 1920px) { ... }
+						</div>
+					</div>
+					<h2 class="main-example__title">And</h2>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Ключове слово and використовується</b> для
+							поєднання медіа-функцій з медіа-типом або іншими
+							медіа-функціями. Ось кілька прикладів:
+							Об'єднання двох загальних стилів для пристроїв з
+							широким екраном (30em) у альбомній орієнтації:
+						</p>
+						<div class="main-example__exml">
+							@media (min-width: 30em) and (orientation:
+							landscape) { .... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Обмеження</b> стилів до екранів пристроїв:
+						</p>
+						<div class="main-example__exml">
+							@media screen and (min-width: 30em) and
+							(orientation: landscape) { .... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Використання</b> коми для застосування
+							стилів, коли користувачі мають різні типи,
+							функції або стани:
+						</p>
+						<div class="main-example__exml">
+							@media (min-height: 680px), screen and
+							(orientation: portrait) { .... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Використання</b> ключового слова not для
+							зміни значення медіа-запиту:
+						</p>
+						<div class="main-example__exml">
+							@media not all and (monochrome) { .... }
+						</div>
+					</div>
+					<div class="main-example__item">
+						<p class="main-example__text">
+							<b>Використання ключового слова only</b> для
+							запобігання застосування стилів в старих
+							браузерах, які не підтримують медіа-запити:
+						</p>
+						<div class="main-example__exml">
+							link rel="stylesheet" media="only screen and
+							(color)" href="modern-styles.css" /
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="example__more more-example">
+				<div class="more-example__little-container">
+					<h2 class="more-example__title">Більше прикладів</h2>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Медіа-запити - це популярний метод доставки
+							адаптивної таблиці стилів на різні пристрої. Щоб
+							продемонструвати простий приклад, ми можемо
+							змінити колір фону для різних пристроїв:
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-01.webp" type="image/webp"><img src="img/expl-01.png" alt="example" ></picture>
+						</div>
+						<div class="more-example__image-expl-second">
+							<picture><source srcset="img/expl-02.webp" type="image/webp"><img src="img/expl-02.png" alt="example" ></picture>
+						</div>
+					</div>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Медіа-запити для меню. В цьому прикладі ми
+							використовуємо медіа-запити для створення
+							адаптивного меню навігації, яке відрізняється
+							дизайном на різних розмірах екрану.
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-03.webp" type="image/webp"><img src="img/expl-03.png" alt="example" ></picture>
+						</div>
+						<div class="more-example__image-expl-second">
+							<picture><source srcset="img/expl-04.webp" type="image/webp"><img src="img/expl-04.png" alt="example" ></picture>
+						</div>
+					</div>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Медіа-запити для стовпців. Розповсюджене
+							використання медіа-запитів заключається в
+							створенні гнучкого макета. В цьому прикладі ми
+							створюємо макет, який змінюється між чотирма,
+							двома стовпцями та стовпцями на всю ширину в
+							залежності від розмірів екрану:
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-05.webp" type="image/webp"><img src="img/expl-05.png" alt="example" ></picture>
+						</div>
+						<div class="more-example__image-expl-second">
+							<picture><source srcset="img/expl-06.webp" type="image/webp"><img src="img/expl-06.png" alt="example" ></picture>
+						</div>
+					</div>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Сховати елементи за допомогою медіа-запитів.
+							Інше розповсюджене використання медіа-запитів -
+							приховування елементів на екранах різних
+							розмірів:
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-07.webp" type="image/webp"><img src="img/expl-07.png" alt="example" ></picture>
+						</div>
+						<div class="more-example__image-expl-second">
+							<picture><source srcset="img/expl-08.webp" type="image/webp"><img src="img/expl-08.png" alt="example" ></picture>
+						</div>
+					</div>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Ви також можете використовувати медіа-запити для
+							зміни розміру шрифта елемента на екранах різних
+							розмірів:
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-09.webp" type="image/webp"><img src="img/expl-09.png" alt="example" ></picture>
+						</div>
+						<div class="more-example__image-expl-second">
+							<picture><source srcset="img/expl-10.webp" type="image/webp"><img src="img/expl-10.png" alt="example" ></picture>
+						</div>
+					</div>
+					<div class="more-example__item">
+						<p class="more-example__text">
+							Ви також можете використовувати <span>(max-width: ..)
+								and (min-width: ..)</span> значення для встановлення
+							мінімальної ширини та максимальної ширини.
+							Наприклад, коли ширина браузера складає від 600
+							до 900 пікселів, змініть зовнішній вигляд
+							елемента div:
+						</p>
+						<div class="more-example__image-expl-first">
+							<picture><source srcset="img/expl-11.webp" type="image/webp"><img src="img/expl-11.png" alt="example" ></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="example__video __little-container">
+				<iframe width="1920" height="400" src="https://www.youtube.com/embed/TlcecNf76Mg" title="Адаптивна верстка та медіа-запити @media / CSS" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__link">
+					<p>Проект виконала: </p><a href="tel:+380680001222">Diana Polovinko</a>
+				</div>
+				<div class="footer__all">&copy; Copyright 2023 MediaQueris</div>
+				<a id="#up" href="#" class="footer__button">Up</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230605163625"></script>
+</body>
+
+</html>

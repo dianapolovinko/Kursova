@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Connection</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230605163625">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header id="up" class="header" data-scroll="5">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">@<span>Media query</span></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Введення</a></li>
+							<li class="menu__item"><a href="expediency.html" class="menu__link">Доцільність</a></li>
+							<li class="menu__item"><a href="connection.html" class="menu__link">Підключення</a></li>
+							<li class="menu__item"><a href="syntax.html" class="menu__link">Синтаксис</a></li>
+							<li class="menu__item"><a href="example.html" class="menu__link">Приклади</a></li>
+							<li class="menu__item"><a href="adaptive.html" class="menu__link">Адаптивна сітка</a></li>
+							<li class="menu__item"><a href="mfirst.html" class="menu__link"><span lang="en">Mobile first</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__contact">
+					<a href="mailto:someMail@com" class="header__link"><img src="img/mail-black.svg" alt="mail">someMail@com</a>
+					<button type="button" class="header__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="connection">
+			<div class="connection__main main-connection"></div>
+			<section class="connection__conect conect">
+				<div class="conect__little-container">
+					<h1 class="conect__title">Підключення медіа запитів</h1>
+					<p class="conect__text">
+						При створенні адаптивних веб-сторінок необхідно
+						звернути увагу на метатег
+						<span lang="en">viewport</span>. Даний тег
+						забезпечує коректне відображення дизайнів адаптивних
+						сайтів на екранах пристроїв, що мають високу
+						щільність пікселів.
+					</p>
+					<h2 class="conect__sub-title">
+						Підключення метатега viewport до сторінки в
+						більшості випадках здійснюється так:
+					</h2>
+					<div class="conect__image">
+						<picture><source srcset="img/viewport.webp" type="image/webp"><img src="img/viewport.png" alt="viewport"></picture>
+					</div>
+					<div class="conect__second">
+						<p>
+							На зображенні нижче показаний приклад
+							підключення медіа запитів, що знаходяться в
+							окремому, власному CSS файлі. Його можна
+							підключити через
+							<span>link rel="styleet"</span>.
+						</p>
+						<p>
+							При підключенні таблиці стилів використовуємо
+							атрибут media встановлюємо медіа запит і
+							вказуємо умови, за яких вони повинні
+							використовуватися.
+						</p>
+						<p>
+							<span>href="/assets/mobile.css</span> - вказуємо шлях до
+							файлу CSS зі стилями для цього медіа запиту;
+						</p>
+					</div>
+					<div class="conect__second-image">
+						<picture><source srcset="img/conect.webp" type="image/webp"><img src="img/conect.png" alt="conect"></picture>
+					</div>
+					<div class="conect__third">
+						Так стилі слід записувати, якщо вони рознесені до
+						різних CSS файлів. Ключове слово "@media..." з
+						умовами щодо нього писати не потрібно.
+					</div>
+					<div class="conect__third-image">
+						<picture><source srcset="img/conect-second.webp" type="image/webp"><img src="img/conect-second.png" alt="conect"></picture>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__link">
+					<p>Проект виконала: </p><a href="tel:+380680001222">Diana Polovinko</a>
+				</div>
+				<div class="footer__all">&copy; Copyright 2023 MediaQueris</div>
+				<a id="#up" href="#" class="footer__button">Up</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230605163625"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Syntax</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230605163625">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header id="up" class="header" data-scroll="5">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">@<span>Media query</span></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Введення</a></li>
+							<li class="menu__item"><a href="expediency.html" class="menu__link">Доцільність</a></li>
+							<li class="menu__item"><a href="connection.html" class="menu__link">Підключення</a></li>
+							<li class="menu__item"><a href="syntax.html" class="menu__link">Синтаксис</a></li>
+							<li class="menu__item"><a href="example.html" class="menu__link">Приклади</a></li>
+							<li class="menu__item"><a href="adaptive.html" class="menu__link">Адаптивна сітка</a></li>
+							<li class="menu__item"><a href="mfirst.html" class="menu__link"><span lang="en">Mobile first</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__contact">
+					<a href="mailto:someMail@com" class="header__link"><img src="img/mail-black.svg" alt="mail">someMail@com</a>
+					<button type="button" class="header__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="syntax">
+			<section class="syntax__main-bg">
+				<h1 class="syntax__title __container">
+					Уроки використання <span lang="en">Media Queries</span>
+				</h1>
+			</section>
+			<section class="syntax__main main-syntax">
+				<div class="main-syntax__little-container">
+					<h2 class="main-syntax__title">
+						Розглянемо синтаксис написання медіа запитів
+					</h2>
+					<h3 class="main-syntax__sub-title">
+						Типи пристроїв, для яких зазначено це правило:
+					</h3>
+					<ul class="main-syntax__list">
+						<li>
+							<span lang="en">screen</span> - тип пристрою, у
+							якому застосовуватиметься це правило. У разі це
+							дисплей (экран);
+						</li>
+						<li>
+							<span lang="en">print</span> – принтер або режим
+							попереднього перегляду сторінки перед друком;
+						</li>
+						<li>
+							<span lang="en">all</span> - всі типи пристроїв;
+						</li>
+						<li>
+							<span lang="en">speech</span> – гаджети, які
+							читають контент з екрану (скринрідери).
+						</li>
+					</ul>
+					<h3 class="main-syntax__sub-title">
+						Умови медіаи запитів поділяються основними логічними
+						операторами:
+					</h3>
+					<ul class="main-syntax__list">
+						<li>
+							<span lang="en">and</span> - потрібно виконання
+							всіх зазначених умов;
+						</li>
+						<li>
+							<span>кома (,)</span> - потрібно виконання
+							однієї із зазначених умов;
+						</li>
+						<li>
+							<span lang="en">not</span> – заперечення
+							зазначеної умови. Тобто. якщо вказана умова не
+							виконується.
+						</li>
+						<li>
+							У круглих дужках зазначаються медіа функції. Це
+							найпростіші функції, які сприймаються як
+							правило.
+						</li>
+					</ul>
+					<h3 class="main-syntax__sub-title">
+						Для вказівки розмірів існує 6 основних значень:
+					</h3>
+					<ul class="main-syntax__list">
+						<li><span lang="en">min-width;</span></li>
+						<li><span lang="en">max-width;</span></li>
+						<li><span lang="en">width;</span></li>
+						<li><span lang="en">min-height;</span></li>
+						<li><span lang="en">max-height.</span></li>
+						<li><span lang="en">height.</span></li>
+					</ul>
+					<h3 class="main-syntax__sub-title">
+						Для вказівки орієнтації мобільного пристрою:
+					</h3>
+					<ul class="main-syntax__list">
+						<li><span lang="en">orientation</span></li>
+					</ul>
+					<p class="main-syntax__text">
+						З цим значенням встановлюються певні стилі, залежно
+						від того, в якому режимі (альбомному чи портретному)
+						відображатиметься сайт. Тобто. в якому положенні
+						користувач триматиме мобільний пристрій: у
+						горизонтальному або вертикальному.
+					</p>
+					<div class="main-syntax__documentation">
+						<p>
+							Хоча медіа-запити можуть робити досить чудові
+							речі на екрані, синтаксис насправді досить
+							простий.
+						</p>
+						<p>
+							Наприклад «Чи екран ширший за 40 ems?» Ви будете
+							слідувати цьому за допомогою CSS. Якщо відповідь
+							на запитання «true», браузер застосує цей CSS до
+							веб-сторінки. Якщо відповідь «false», браузер
+							проігнорує цей CSS.
+						</p>
+						<p>
+							Програміст міг би подумати що це як оператор
+							if/else.
+						</p>
+						<p>
+							Хоча CSS2 підтримував медіа-запити для типів
+							медіа (таких як екран або друк), лише в CSS3 ми
+							змогли виконувати медіа-запити на основі якості
+							пристрою, наприклад ширини вікна перегляду. Ось
+							чому адаптивний дизайн не існував до 2010 року —
+							до того він був неможливий.
+						</p>
+						<p>Приклад простого медіа-запиту:</p>
+						<div>
+							<picture><source srcset="img/example.webp" type="image/webp"><img src="img/example.png" alt="example" ></picture>
+						</div>
+						<p>
+							Перший рядок CSS надає <b>body</b> веб-сайту
+							колір тла зеленого кольору. Другий рядок CSS
+							говорить, що якщо вікно перегляду має мінімальну
+							ширину 40 ems, то <b>body</b> має мати синій
+							колір тла. Екрани з вузькою шириною отримують
+							зелений фон, а ширші екрани отримують синій фон.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__link">
+					<p>Проект виконала: </p><a href="tel:+380680001222">Diana Polovinko</a>
+				</div>
+				<div class="footer__all">&copy; Copyright 2023 MediaQueris</div>
+				<a id="#up" href="#" class="footer__button">Up</a>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230605163625"></script>
+</body>
+
+</html>
